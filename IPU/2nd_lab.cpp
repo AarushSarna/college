@@ -1,20 +1,20 @@
 #include <iostream>
 using namespace std;
-class complex {
+class complex_num {
 private:
     double real;
     double imag;
 public:
-    complex() {
+    complex_num() {
         real = 0.0;
         imag = 0.0;
     }
-    complex(double r, double i) {
+    complex_num(double r, double i) {
         real = r;
         imag = i;
     }
-    complex add(const complex& other) const {
-        return complex(real + other.real, imag + other.imag);
+    complex_num add(const complex_num& other) const {
+        return complex_num(real + other.real, imag + other.imag);
     }
     void show() const {
         cout << "Complex number is " << real << " + " << imag << " i" << endl;
@@ -22,9 +22,9 @@ public:
 };
 
 int main() {
-    complex s1(2, 5);
-    complex s2(8, 5);
-    complex s3 = s1.add(s2);
+    complex_num s1(2, 5);
+    complex_num s2(8, 5);
+    complex_num s3 = s1.add(s2);
     s1.show();
     s2.show();
     s3.show();
