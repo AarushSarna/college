@@ -9,7 +9,7 @@ class string_functions{
         }
         string_functions(string str_input){
             chr=str_input;
-        }
+        }f
         string_functions operator + (string_functions sf){
             return string_functions(chr+sf.chr);
         }
